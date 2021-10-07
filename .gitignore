@@ -1,0 +1,8 @@
+.ipynb_checkpoints/
+.obsidian/
+tmp/
+notes.md
+src/featurization.py
+src/train2.py
+src/eval2.py
+src/prep2.py

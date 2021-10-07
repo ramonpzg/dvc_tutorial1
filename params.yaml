@@ -1,0 +1,13 @@
+prepare:
+  split: 0.30
+  seed: 20170428
+
+featurize:
+  max_features: 500
+  ngrams: 1
+
+train:
+  seed: 42
+  n_est: 50
+  min_split: 2
+  max_feats: 0.5
