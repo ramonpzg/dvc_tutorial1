@@ -19,5 +19,6 @@ jobs:
 
           echo "# CML Report" > report.md
           dvc metrics diff --show-md master >> report.md
-
+          dvc add report.md models/rf_model.pkl
+          dvc push
           cml-send-comment report.md
