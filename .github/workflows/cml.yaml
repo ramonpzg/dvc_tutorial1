@@ -14,10 +14,9 @@ jobs:
           pip install -r requirements.txt
 
           dvc repro
-          dvc add  models/rf_model.pkl
-          dvc push
           git fetch --prune
 
           echo "# CML Report" > report.md
           dvc metrics diff --show-md master >> report.md
+          dvc push
           cml-send-comment report.md
