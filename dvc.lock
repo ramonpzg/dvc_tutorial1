@@ -43,7 +43,7 @@ stages:
     cmd: python src/evaluate.py models/rf_model.pkl data/processed
     deps:
     - path: data/processed
-      md5: 6fd67a5bdb7c1ca9180d42e5e2b0efed.dir
+      md5: c70be8ec7f9ff946b2382d659fa9f1ea.dir
       size: 972702
       nfiles: 3
     - path: models/rf_model.pkl
