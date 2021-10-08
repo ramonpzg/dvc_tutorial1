@@ -4,7 +4,7 @@ import sklearn.metrics as metrics
 
 model_file = sys.argv[1]
 test_file = os.path.join(sys.argv[2], "test.csv")
-scores_file = os.path.join('metrics', 'rf_scores.json')
+scores_file = os.path.join('metrics', 'metrics.json')
 
 with open(model_file, "rb") as fd:
     model = pickle.load(fd)

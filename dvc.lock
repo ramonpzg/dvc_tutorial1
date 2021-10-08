@@ -40,9 +40,9 @@ stages:
       md5: 671c74e958e09e63b9c2b7751e2cd4d0
       size: 24290831
     - path: src/evaluate.py
-      md5: 4d40ddfd2c935eb6034dae53e18b3a37
-      size: 754
+      md5: 95a2ccf11bfaf3a117bcab86f7d23d03
+      size: 752
     outs:
-    - path: metrics/rf_scores.json
+    - path: metrics/metrics.json
       md5: 2fceab6ca867b69dc383c9741dbaf58b
       size: 132
