@@ -1,5 +1,15 @@
 schema: '2.0'
 stages:
+  get_data:
+    cmd: python src/get_data.py
+    deps:
+    - path: src/get_data.py
+      md5: e287a1647637d6266ac0d9877c4157e4
+      size: 309
+    outs:
+    - path: data/raw/SeoulBikeData.csv
+      md5: 4ec879231f9c38e97dd87049bdb61c18
+      size: 604166
   prepare:
     cmd: python src/prepare.py data/raw/SeoulBikeData.csv
     deps:
