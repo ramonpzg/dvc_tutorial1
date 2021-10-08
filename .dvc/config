@@ -1,4 +1,4 @@
 [core]
     remote = bikes_storage
 ['remote "bikes_storage"']
-    url = ssh://ubuntu@ec2-3-25-191-207.ap-southeast-2.compute.amazonaws.com/bikes_storage
+    url = s3://bikestorage
