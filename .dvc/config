@@ -2,4 +2,4 @@
     remote = bikes_storage
 ['remote "bikes_storage"']
     url = s3://bikestorage
-    listobjects = false
+    listobjects = true
