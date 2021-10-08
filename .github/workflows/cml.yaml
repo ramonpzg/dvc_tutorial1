@@ -18,7 +18,7 @@ jobs:
           dvc repro
           git fetch --prune
 
-          dvc remote add -d bikes_storage --force s3://bikestorage
+          dvc remote add -f -d bikes_storage s3://bikestorage
 
           echo "# CML Report" > report.md
           dvc metrics diff --show-md master >> report.md
