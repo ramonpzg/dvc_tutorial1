@@ -4,7 +4,7 @@ import sklearn.metrics as metrics
 
 model_file = sys.argv[1]
 test_file = os.path.join(sys.argv[2], "test.csv")
-scores_file = sys.argv[3]
+scores_file = os.path.join('metrics', 'rf_scores.json')
 
 with open(model_file, "rb") as fd:
     model = pickle.load(fd)
@@ -20,5 +20,6 @@ rmse = np.sqrt(metrics.mean_squared_error(y_test.values, predictions))
 r2_score = model.score(X_test.values, y_test.values)
 
 with open(scores_file, "w") as fd:
-    json.dump({"MAE": mae, "RMSE": rmse, "R^2":r2_score, "OOB_Score": model.oob_score_}, fd, indent=4)
+    json.dump({"MAE": mae, "RMSE": rmse, 
+               "R^2":r2_score, "OOB_Score": model.oob_score_}, fd, indent=4)
 

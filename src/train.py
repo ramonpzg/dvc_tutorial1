@@ -5,7 +5,7 @@ from sklearn.ensemble import RandomForestRegressor
 params = yaml.safe_load(open("params.yaml"))["train"]
 
 input_data = sys.argv[1]
-output = sys.argv[2]
+output = os.path.join('models', 'rf_model.pkl')
 seed = params["seed"]
 n_est = params["n_est"]
 min_split = params["min_split"]
