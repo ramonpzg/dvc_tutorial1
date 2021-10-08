@@ -6,3 +6,5 @@ src/featurization.py
 src/train2.py
 src/eval2.py
 src/prep2.py
+.dvc/tmp/gdrive-user-credentials.json
+our-mediator-314703-8bf86e5f9cad.json

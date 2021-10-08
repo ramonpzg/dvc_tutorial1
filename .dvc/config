@@ -2,3 +2,6 @@
     remote = bikes_storage
 ['remote "bikes_storage"']
     url = gdrive://1je6yTRzigoziv3lPz3S920KsVoYMzAnY
+    gdrive_client_id = 410562397609-6gqjupisaenb9g2ah85esilgffo2ednh.apps.googleusercontent.com
+    gdrive_client_secret = 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
+    gdrive_use_service_account = true
