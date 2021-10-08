@@ -15,10 +15,12 @@ jobs:
 
           pip install -r requirements.txt
 
+          dvc remote add -f -d bikes_storage s3://testingbikes
+
           dvc repro
+          dvc push
           git fetch --prune
 
-          dvc remote add -f -d bikes_storage s3://bikestorage
 
           echo "# CML Report" > report.md
           dvc metrics diff --show-md master >> report.md
