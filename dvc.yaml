@@ -1,0 +1,16 @@
+stages:
+  prepare:
+    cmd: python src/prepare.py data/raw/SeoulBikeData.csv
+    deps:
+    - data/raw/SeoulBikeData.csv
+    - src/prepare.py
+    outs:
+    - data/processed/test.csv
+    - data/processed/train.csv
+  train:
+    cmd: python src/train.py data/processed/train.csv
+    deps:
+    - data/processed/train.csv
+    - src/train.py
+    outs:
+    - models/rf_model.pkl

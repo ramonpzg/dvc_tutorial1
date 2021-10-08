@@ -1,0 +1,31 @@
+schema: '2.0'
+stages:
+  prepare:
+    cmd: python src/prepare.py data/raw/SeoulBikeData.csv
+    deps:
+    - path: data/raw/SeoulBikeData.csv
+      md5: 4ec879231f9c38e97dd87049bdb61c18
+      size: 604166
+    - path: src/prepare.py
+      md5: 680375a4e7ee31f9d9ee4af0683bf141
+      size: 2654
+    outs:
+    - path: data/processed/test.csv
+      md5: 3a4ec8d2c003f36f970b142d7762d11d
+      size: 293728
+    - path: data/processed/train.csv
+      md5: 7d0e791cf592b24ab36fb433b4850b85
+      size: 678953
+  train:
+    cmd: python src/train.py data/processed/train.csv
+    deps:
+    - path: data/processed/train.csv
+      md5: 7d0e791cf592b24ab36fb433b4850b85
+      size: 678953
+    - path: src/train.py
+      md5: d3259988501a85d6ec567edecc1e30bd
+      size: 925
+    outs:
+    - path: models/rf_model.pkl
+      md5: 671c74e958e09e63b9c2b7751e2cd4d0
+      size: 24290831
