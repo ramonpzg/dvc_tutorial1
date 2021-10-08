@@ -18,6 +18,7 @@ jobs:
           dvc remote add -f -d bikes_storage s3://testingbikes
 
           dvc repro
+          dvc add models/rf_model.pkl
           dvc push
           git fetch --prune
 
