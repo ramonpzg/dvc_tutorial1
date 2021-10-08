@@ -13,12 +13,15 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: |
 
+          cat ${{ secrets.SSH_KEY }} > testing.pem
+          chmod 400 testing.pem
+
           pip install -r requirements.txt
-
-          dvc remote add -f -d bikes_storage s3://testingbikes
-
+          
+          dvc remote add -f -d bikes_storage ssh://ubuntu@ec2-3-25-191-207.ap-southeast-2.compute.amazonaws.com/bikes_storage
+          dvc remote modify --local bikes_storage keyfile testing.pem
+          
           dvc repro
-          dvc add models/rf_model.pkl
           dvc push
           git fetch --prune
 
