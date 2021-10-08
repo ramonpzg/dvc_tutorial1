@@ -5,3 +5,4 @@
     gdrive_client_id = 410562397609-6gqjupisaenb9g2ah85esilgffo2ednh.apps.googleusercontent.com
     gdrive_client_secret = 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
     gdrive_use_service_account = true
+    gdrive_service_account_user_email = ramonpzg01@gmail.com
