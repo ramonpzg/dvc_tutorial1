@@ -1,9 +1,9 @@
 import pandas as pd, numpy as np
-import os, sys, yaml
+import os, sys
 
-params = yaml.safe_load(open("params.yaml"))["prepare"]
+# params = yaml.safe_load(open("params.yaml"))["prepare"]
 
-split = params["split"]
+split = 0.30
 
 # raw_data_path = os.path.join('data', 'raw', 'SeoulBikeData.csv')
 raw_data_path = sys.argv[1]

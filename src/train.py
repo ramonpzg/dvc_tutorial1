@@ -1,15 +1,15 @@
-import os, pickle, sys, yaml
+import os, pickle, sys
 import numpy as np, pandas as pd
 from sklearn.ensemble import RandomForestRegressor
 
-params = yaml.safe_load(open("params.yaml"))["train"]
+# params = yaml.safe_load(open("params.yaml"))["train"]
 
 input_data = sys.argv[1]
 output = os.path.join('models', 'rf_model.pkl')
-seed = params["seed"]
-n_est = params["n_est"]
-min_split = params["min_split"]
-max_feats = params["max_feats"]
+seed = 42
+n_est = 100
+min_split = 2
+max_feats = 0.5
 
 
 X_train = pd.read_csv(input_data)
