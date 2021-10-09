@@ -21,5 +21,5 @@ r2_score = model.score(X_test.values, y_test.values)
 
 with open(scores_file, "w") as fd:
     json.dump({"MAE": mae, "RMSE": rmse, 
-               "R^2":r2_score, "OOB_Score": model.oob_score_}, fd, indent=4)
+               "R^2":r2_score}, fd, indent=4)
 

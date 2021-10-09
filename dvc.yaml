@@ -19,12 +19,12 @@ stages:
     - data/processed/train.csv
     - src/train.py
     outs:
-    - models/rf_model.pkl
+    - models/xgb_model.pkl
   evaluate:
-    cmd: python src/evaluate.py models/rf_model.pkl data/processed
+    cmd: python src/evaluate.py models/xgb_model.pkl data/processed
     deps:
     - data/processed
-    - models/rf_model.pkl
+    - models/xgb_model.pkl
     - src/evaluate.py
     metrics:
     - metrics/metrics.json:
