@@ -33,26 +33,26 @@ stages:
       md5: 7d0e791cf592b24ab36fb433b4850b85
       size: 678953
     - path: src/train.py
-      md5: 791df9206ae88bff51ea1757ce1f218e
-      size: 474
+      md5: 1ef8a8ff604427de678a7e4b49aab402
+      size: 489
     outs:
-    - path: models/lgbm_model.pkl
-      md5: ef8cb4eeb933cefccd4ac1744597d598
-      size: 273412
+    - path: models/cat_model.pkl
+      md5: 48b7b1a0aa4c4ddb03ffc95d22fe60c0
+      size: 116800
   evaluate:
-    cmd: python src/evaluate.py models/lgbm_model.pkl data/processed
+    cmd: python src/evaluate.py models/cat_model.pkl data/processed
     deps:
     - path: data/processed
       md5: c70be8ec7f9ff946b2382d659fa9f1ea.dir
       size: 972702
       nfiles: 3
-    - path: models/lgbm_model.pkl
-      md5: ef8cb4eeb933cefccd4ac1744597d598
-      size: 273412
+    - path: models/cat_model.pkl
+      md5: 48b7b1a0aa4c4ddb03ffc95d22fe60c0
+      size: 116800
     - path: src/evaluate.py
       md5: 8dde031a22c9c43fadad96968a0e8e9f
       size: 721
     outs:
     - path: metrics/metrics.json
-      md5: 0abad7734b4859372686eaaeefe35136
+      md5: 3db3952115e7c959ceaf3088ef9442ec
       size: 94

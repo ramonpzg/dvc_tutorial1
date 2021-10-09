@@ -1,3 +1,4 @@
 /rf_model.pkl
 /xgb_model.pkl
 /lgbm_model.pkl
+/cat_model.pkl
